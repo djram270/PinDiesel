@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Ejemplo Completa</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <!-- Contenedor del Título -->
+    <div class="title-container">
+        <h1 class="title">PIN DIESEL</h1>
+    </div>
+    <hr>
+    <br>
+    <!-- Contenedor de Imagen, Texto y Carrusel -->
+    <div class="layout">
+        <div class="image-box">
+            <img src="media/images/VinDiesel.png" alt="Imagen" class="single-image">
+        </div>
+
+        <div class="text-center">
+            <p>Venta de Pines desde 6 mil</p>
+            <div class="small-images">
+                <div class="small-image-row">
+                    <img src="media/images/Nequi.png" alt="Imagen pequeña">
+                    <span>316 8788706</span>
+                </div>
+                <div class="small-image-row">
+                    <img src="media/images/Bancolombia.png" alt="Imagen pequeña">
+                    <span>0324 5874145</span>
+                </div>
+                <div class="small-image-row">
+                    <img src="media/images/whatsapp.png" alt="Imagen pequeña">
+                    <span>Info: 316 8788706</span>
+                </div>
+            </div>
+        </div>      
+
+        <div class="carousel">
+            <div class="carousel-container">
+                <img src="media/pines/alicia.jpg" alt="Imagen 1">
+                <img src="media/pines/alls_good_dog.jpg" alt="Imagen 2">
+                <img src="media/pines/berserk.jpg" alt="Imagen 3">
+                <img src="media/pines/calamardo_elegante.jpg" alt="Imagen 4">
+                <img src="media/pines/chopper.jpg" alt="Imagen 5">
+                <img src="media/pines/chopper_merry.jpg" alt="Imagen 6">
+                <img src="media/pines/demon_slayer_rat.jpg" alt="Imagen 7">
+                <img src="media/pines/luffy.jpg" alt="Imagen 8">
+                <img src="media/pines/myheroacademia.jpg" alt="Imagen 9">
+                <img src="media/pines/pokemon_balls.jpg" alt="Imagen 10">
+                <img src="media/pines/pokemon_design.jpg" alt="Imagen 11">
+                <img src="media/pines/pokemon_simple.jpg" alt="Imagen 12">
+                <img src="media/pines/pokemon_skeleton.jpg" alt="Imagen 13">
+                <img src="media/pines/pokemonxharry_potter.jpg" alt="Imagen 14">
+                <img src="media/pines/puro_hueso.jpg" alt="Imagen 15">
+                <img src="media/pines/south_park.jpg" alt="Imagen 16">
+                <img src="media/pines/walle.jpg" alt="Imagen 17">
+                <img src="media/pines/zoro.jpg" alt="Imagen 18">
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <!-- Contenedor de Texto Pequeño -->
+    <div class="footer-text">
+        <p class="text-small">"Los pines son primero."</p>
+        <p class="text-small">Pin Diesel 2024</p>
+    </div>
+
+    <script>
+        // Carrusel automático
+        let index = 0;
+        function showNextImage() {
+            const carouselContainer = document.querySelector('.carousel-container');
+            const images = carouselContainer.getElementsByTagName('img');
+            images[index].style.display = 'none';
+            index = (index + 1) % images.length;
+            images[index].style.display = 'block';
+        }
+        setInterval(showNextImage, 2500); // Cambia de imagen cada 2.5 segundos
+    </script>
+
+</body>
+</html>
